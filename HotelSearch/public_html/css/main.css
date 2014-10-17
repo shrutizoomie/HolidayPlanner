@@ -166,7 +166,8 @@ body {
 .header-container {
     border-bottom: 20px solid #fff;
     height: 100px;
-        
+    font-weight:bold;
+    text-align: center;
 }
 
 .footer-container{
