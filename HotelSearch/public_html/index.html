@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>MyPlanner</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+ 
+        <link rel="stylesheet" href="css/normalize.min.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/kickstart-buttons.css" type="text/css"/>
+
+
+        <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+		
+    <script>
+    function showSearch(item)
+    {
+
+        if (item === 'item1')
+        {
+            document.getElementById('flight').style.display = "block";
+            document.getElementById('Cars').style.display = "none";
+            document.getElementById('Hotels').style.display = "none";
+        }
+        else if(item === 'item2')
+        {
+            document.getElementById('flight').style.display = "none";
+            document.getElementById('Hotels').style.display = "block";
+            document.getElementById('Cars').style.display = "none";
+        } 
+        else if(item === 'item3')
+        {
+            document.getElementById('flight').style.display = "none";
+            document.getElementById('Hotels').style.display = "none";
+            document.getElementById('Cars').style.display = "block";
+        }
+
+    }
+    function changeLocation()
+    {
+//        alert(window.location);
+//        window.location.assign('/HotelSearch/findhotel.html');
+        window.location.replace('http://www.w3schools.com/');
+//        window.location.href = 'http://www.w3schools.com';
+//        window.location.assign("I:\\SJSUSem2\\CS235\\Assign#3\\HotelSearch\\public_html\\findhotel.html");
+    }
+    </script>
+    		
+    </head>
+	
+   <body class="holiday">
+       
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+    
+<div class="header-container">
+
+    <header class="wrapper clearfix" >
+        <img src="img/logo_1.jpg" style="height:60px;width:180px;float:left;"/> 
+          
+        <ul class='headmenu'>
+            
+               <li id='headitem1'> Contact Us</li>
+           <li id='headitem2' >My Task</li>
+           <li id='headitem3' >Live Chat</li>
+           </ul>
+
+
+    </header>
+</div> <!--  header-container -->
+
+<div class="main-container1" style="background-image:url(img/back_1.jpg);">
+<ul class='menu'>
+        <li id='item1' onclick='showSearch("item1")'>Flights</li>
+        <li id='item2' onclick='showSearch("item2")'>Hotels</li>
+        <li id='item3' onclick='showSearch("item3")'>Holidays</li>
+</ul>
+<div class="searchbox" >  
+
+<div id="flight" class="searchboxform" >    
+    <br>
+    <h2> Book Cheap Flights </h2> 
+    <hr>
+       <form action="findflight.html" method="get" style="font-family:sans-serif;float:left;color: white;">
+            <b>
+                <input type="radio" name="trip" value="One-way" checked>One-way
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="radio" name="trip" value="Round Trip"> Round Trip
+                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="radio" name="trip" value="Multi City">Multi City
+                <br>
+                <br>
+                
+        From: <input list="Departurecity" name="Departurecity" style="width:180px;height:25px;" placeholder=" Type Departure city " >
+            <datalist id="Departurecity" >
+                      <option value="San jose" >
+                      <option value="LA">
+                      <option value="Chicago">
+                      <option value="Denver">
+                      <option value="San fransisco">
+            </datalist>
+        To: <input list="Destinationcity" name="Destinationcity" style="width:180px;height:25px;" placeholder=" Type Destination city ">
+            <datalist id="Destinationcity">
+                     <option value="San jose">
+                     <option value="LA">
+                     <option value="Chicago">
+                     <option value="Denver">
+                     <option value="San fransisco">
+            </datalist>
+            Budget: <select name="budget" style="width:150px;height:25px;">
+                    <option value="1000$-3000$">0$</option>
+                    <option value="1000$-3000$">100$-300$</option>
+                    <option value="3000$-5000$">300$-500$</option>
+                    <option value="5000$-8000$">500$-800$</option>
+            </select>
+            <br>
+            <br>
+            Departure: <input type="date" name="bday" min="2014-10-05" style="width:150px;height:25px;">
+            Return: <input type="date" name="bday" min="2014-10-05" style="width:150px;height:25px;">
+            Adults: <select name="adults" style="width:50px;height:25px;">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+            </select>
+            Children: <select name="Children" style="width:50px;height:25px;">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+            </select> 
+            <br> <br>
+            <input type="submit" onclick = "changeLocation()" value="Search Flights" style="background-color:orange ;width:150px;height:40px; float:right ;" > 
+
+            </form>
+    </div><!--flight searchboxform -->
+
+     <div id='Hotels' class="searchboxform"  >
+         <br>
+
+        <h2> Make Hotel Reservations  </h2> 
+        <hr>
+        <h4> I want to go to.... </h4>
+
+        <form action="findhotel.html" method="get" style="font-family:sans-serif;float:left;color: white;">
+
+             <input list="Destination" name="Destination" style="width:250px;height:25px;" placeholder="City or Hotel Name" >
+            <datalist id="Destination">
+                      <option value="San jose" >
+                       <option value="LA">
+                      <option value="Chicago">
+                      <option value="Denver">
+                      <option value="San fransisco">
+            </datalist>
+
+            Budget: <select name="budget" style="width:150px;height:25px;">
+                    <option value="0">0$</option>
+                    <option value="100$-300$">100$-300$</option>
+                    <option value="300$-500$">300$-500$</option>
+                    <option value="500$-800$">500$-800$</option>
+            </select>
+            <br>
+            <br>
+            Check In:
+                    <input type="date" name="bday" min="2014-10-05" style="width:150px;height:25px;">
+            Check Out:
+                    <input type="date" name="bday" min="2014-10-05" style="width:150px;height:25px;">
+            Room(s):<select name="Children" style="width:50px;height:25px;">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+            </select> 
+                    <br> <br>
+            <input type="submit" value="Find my hotel!" style="background-color:orange ;width:150px;height:40px; float:right ;" > 
+            </form>
+
+
+
+
+    </div> <!-- #Hotels --> 
+
+    <div id='Cars' class="searchboxform" >
+
+        <br>
+        <h2> Books Holiday Packages  </h2>
+        <hr>
+       
+
+       <form action="demo_form.asp" method="get" style="font-family:sans-serif;float:left;color: white;">
+          <h4> I want to go to.... </h4>
+         <input list="Destination" name="Destination" style="width:300px;height:25px;" pLaceholder="Type Destinaation City" >
+           <datalist id="Destination">
+                     <option value="San jose" >
+                      <option value="LA">
+                     <option value="Chicago">
+                     <option value="Denver">
+                     <option value="San fransisco">
+           </datalist>
+         <span>
+           Budget:<select name="budget" style="width:150px;height:30px;">
+                   <option value="0">0$</option>
+                   <option value="100$-300$">100$-300$</option>
+                   <option value="300$-500$">300$-500$</option>
+                   <option value="500$-800$">500$-800$</option>
+           </select>
+         </span>
+             <br> <br>
+            <input type="submit" value="Search Hotels" style="background-color:orange ;width:150px;height:40px; float:right ;" > 
+
+            </form>
+
+    </div>    <!-- #cars---->                         
+
+    </div> <!-- #searchbox -->
+    </div><!-- #main -->
+    </div> <!-- #main-container1 -->
+
+<div class="main-container2" >
+<div class="main wrapper clearfix" >       
+<table>
+    <tr>
+        <td>
+            <h2> Holiday Offers </h2> 
+        
+<div class="Holidayoffer">
+<table style="width:100%">
+<tr>
+<th align="left">
+ Special Holiday Deals
+</th>
+</tr>
+<tr>
+   <td colspan="3" align:center >
+                <img src="img/hollywood-sign.jpg" alt="" style="height:200px;width:400px; " />
+   </td>
+</tr>
+<b>
+
+<tr>
+        <td>East State Holiday</td>		
+        <td style="color:red;"> $115 </td>
+</tr>
+<tr>
+        <td>Luxury Holiday</td>		
+        <td style="color:red;"> $115 </td>
+</tr >
+<tr>
+        <td>Beach Holiday Holiday</td>		
+        <td style="color:red;"> $115 </td>
+</tr>
+
+</table> <!--table Holiday Offers -->
+<a href=" www.google.com " style="float:right;" >  >> more </a>    
+
+        </div><!--Holiday Offers -->
+</td>
+<td valign="top">
+        <div>                           
+                <h2 > Flight Deals <h2>
+
+                <div class="subdiv">
+                        <table style="width:100%">
+                                <tr> 
+                                        <th align="left"> Route </th>
+                                        <th align="left"> One way fares </th>
+
+                                </tr>
+
+                                <tr>
+                                        <td><img src="img/flight.jpg" alt="" style="height:25px;width:25px;"/></td>
+                                        <td> San Jose to Chicago</td>		
+                                        <td style="color:red;"> $280 </td>
+                                </tr>
+                                <tr>
+                                        <td><img src="img/flight.jpg" alt="" style="height:25px;width:25px;"/></td>
+                                        <td> Chicago to Newyork </td>		
+                                        <td style="color:red;"> $380 </td>
+                                </tr>
+
+                                <tr>
+                                         <td><img src="img/flight.jpg" alt="" style="height:25px;width:25px;"/></td>
+                                        <td> San Fransisco to Los angles</td>		
+                                        <td style="color:red;"> $115 </td>
+                                </tr>
+                                <tr>
+                                        <td><img src="img/flight.jpg" alt="" style="height:25px;width:25px;"/></td>
+                                        <td > Washington to Chicago</td>		
+                                        <td style="color:red;"> $380 </td>
+                                </tr >
+                                <tr>
+                                        <td><img src="img/flight.jpg" alt="" style="height:25px;width:25px;"/></td>
+                                        <td>Los angles to San Jose</td>		
+                                        <td style="color:red;"> $105 </td>
+                                </tr>
+
+
+                        </table><!--table flight -->
+                        <a href=" www.google.com " style="float:right;" > >>more </a>    
+
+                        </div> <!--flight subdiv -->
+
+                        </div><!--flight -->
+</td>
+<td valign="top">
+<div>
+<h3>Subscribe for Deals</h3>
+<div class="subscribe">
+          
+<form>
+<input type="email" name="email" style="height:25px;width:150px;padding-right:5px;placeholder:Enter Email;">
+<input type="submit" value="Submit" style="background-color:orange;height:30px;width:80px ">
+</form>
+</div> <!--subscribe -->
+</div><!--subscribe -->
+</td>
+    </tr></table>
+    
+</div> <!-- main wrapper clearfix -->
+</div> <!-- main container1-->
+
+
+<div class="footer-container" style="background-image:url(img/footer_1.png);">
+                <footer class="wrapper">
+                    
+                    <div class="copyright">
+                    <table width ='100%' style="margin-top:-10px;font-size: 75%;padding-top:10px;">
+                        <tr>
+                            <td>
+                                <p>
+                       Copyright Ux-plorer 2014 <br>
+                       * MyPlanner is not a booking agent and does not charge any service fees to users of our site.<br>
+                       </p>
+                            </td>
+                            <td>
+                       <ul class='footer-ul'>
+                      
+                            <li> <a href="www.google.com"  > <img src="img/faceboook.png" style="height:30px;width:30px" /> </a></li>
+                            <li> <a href="www.google.com" > <img src="img/twitter.png" alt="" style="height:30px;width:30px" />  </a></li>
+                            <li> <a href="www.google.com" > <img src="img/youtube.png" alt="" style="height:30px;width:30px" />  </a></li>
+                        </ul>
+                    </td>
+                        </tr>
+                    </table>
+                    </div>
+                    
+        </footer>
+</div>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.js"></script>
+<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.1.js"><\/script>')</script>
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,619 @@
+
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+/*! HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/ */
+
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+}
+
+html {
+    font-size: 1em;
+    line-height: 1.4;
+}
+a:link  {font-weigt:bold;color:blue; background-color:transparent}
+a:visited {color:#000000; background-color:transparent}
+a:hover   {color:red; background-color:transparent}
+a:active  {color:#ff0000; background-color:transparent}
+
+.Holidayoffer{
+   border: 1px solid purple;
+    
+    outline-color: #5C0A7A;
+    outline-width: 5px;
+    box-shadow:10px 10px 5px #888888;
+    background-color: white;
+    color: black;
+    padding: 3px 3px 0 0;
+    text-decoration: none;
+    border-radius: 3px 3px 0 0;
+    float:left;
+    height:350px;
+    width:400px;
+    font-weight: normal;
+    font-size:13px;
+      margin-right: 40px;
+      display: inline-block;
+     
+}
+.subscribe
+{
+  border: 1px solid purple;
+  width:250px;
+  box-shadow:  10px 10px 5px #888888;
+  display: inline-block;
+  outline-color: #5C0A7A;
+  outline-width: 5px;
+
+}
+.subdiv{
+    margin-right: 40px;
+    border: 1px solid purple;
+    display: inline-block;
+    outline-color: #5C0A7A;
+    outline-width: 5px;
+    box-shadow:  10px 10px 5px #888888;
+    background-color: white;
+    color: black;
+    padding: 3px 3px;
+    text-decoration: none;
+    border-radius: 3px 3px 0 0;
+    float:left;
+    height:200px;
+    width:310px;
+    font-weight: normal;
+    font-size:13px;
+    
+}
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+audio,
+canvas,
+img,
+video {
+    vertical-align: middle;
+}
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+textarea {
+    resize: vertical;
+}
+.Menuselect
+{
+    float:left;
+ 
+    color:white;
+    padding:3px 3px;
+    border-radius: 3px 3px 0 0;
+    height:50px;
+    width:500px;
+     margin: 30px 30px;
+  background-color: black;  border-bottom-color: #c0c0c0;
+      
+      opacity:0.8;filter:alpha(opacity=100);
+}
+.browsehappy {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+
+/* ===== Initializr Styles ==================================================
+   Author: Jonathan Verrecchia - verekia.com/initializr/responsive-template
+   ========================================================================== */
+
+body {
+    font: 16px/26px Helvetica, Helvetica Neue, Arial;
+    
+}
+
+.wrapper {
+    width: 90%;
+    margin: 0 5%;
+}
+
+.searchbox
+{
+  width: 800px;  height: 330px;  margin: 30px 50px;
+  background-color: rgba(0,0,0,0.8);  border-bottom-color: #c0c0c0;
+      
+     
+}
+
+.searchboxform
+{
+    color:white;
+  margin: 30px 40px;
+  font-weight: bold;
+ 
+}
+
+/* ===================
+    ALL: Orange Theme
+   =================== */
+
+.header-container {
+    border-bottom: 20px solid #fff;
+    height: 100px;
+        
+}
+
+.footer-container{
+    background-color:rgb(92, 96, 157);
+    height:80px;
+ 
+}
+.copyright
+{
+      /* height: 68px; */
+      /* width: 533px; */
+  
+      /* margin-top: -13px; */
+
+      /* margin-left: -60px; */
+}
+.follow{
+     height: 53px; 
+     width: 226px; 
+     list-style: none;
+    
+
+}
+.main aside {
+    border-top: 20px ;
+}
+
+.header-container
+{
+  height: 40px;
+  
+}
+
+
+.main aside {
+    background:white;
+}
+
+.title {
+    alignment-adjust:auto;
+    color: white;
+}
+
+/* ==============
+    MOBILE: Menu
+   ============== */
+
+nav ul {
+    margin: 0;
+    padding: 0;
+}
+
+
+nav li {
+    display: inline;
+}
+
+
+
+
+nav li a {
+     background-color: white;
+    color: darkmagenta;
+    padding: 3px 3px;
+    text-decoration: none;
+    border-radius: 3px 3px 0 0;
+    font-weight: bolder;
+    
+}
+
+nav a:hover{
+   
+}
+nav a:visited {
+    
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* ==============
+    MOBILE: Main
+   ============== */
+
+.main {
+    padding: 30px 0;
+}
+
+.main article h1 {
+    font-size: 2em;
+}
+
+.main aside {
+    color: white;
+    padding: 0px 5% 10px;
+}
+
+.footer-container footer {
+    color: white;
+    padding: 20px 0;
+}
+
+/* ===============
+    ALL: IE Fixes
+   =============== */
+
+.ie7 .title {
+    padding-top: 10px;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+
+@media only screen and (min-width: 480px) {
+
+/* ====================
+    INTERMEDIATE: Menu
+   ==================== */
+
+    nav a {
+        float: right;
+        width: 27%;
+        margin: 0 1.7%;
+        padding: 25px 2%;
+        margin-bottom: 0;
+    }
+
+    nav li:first-child a {
+        margin-left: 0;
+    }
+
+    nav li:last-child a {
+        margin-right: 0;
+    }
+
+/* ========================
+    INTERMEDIATE: IE Fixes
+   ======================== */
+
+    nav ul li {
+        display: inline;
+    }
+
+    .oldie nav a {
+        margin: 0 0.7%;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+
+/* ====================
+    WIDE: CSS3 Effects
+   ==================== */
+
+    .header-container,
+    .main aside {
+        -webkit-box-shadow: 0 5px 10px #aaa;
+           -moz-box-shadow: 0 5px 10px #aaa;
+                box-shadow: 0 5px 10px #aaa;
+    }
+
+/* ============
+    WIDE: Menu
+   ============ */
+
+    .title {
+        float: left;
+    }
+
+    nav {
+        float: right;
+        width: 38%;
+    }
+
+/* ============
+    WIDE: Main
+   ============ */
+
+    .main article {
+        float: left;
+        width: 57%;
+    }
+
+    .main aside {
+        float: right;
+        width: 28%;
+    }
+}
+
+@media only screen and (min-width: 1140px) {
+
+/* ===============
+    Maximal Width
+   =============== */
+
+    .wrapper {
+        /* width: 1026px; */ /* 1140px - 10% for margins */
+        /* margin: 0 auto; */
+    }
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    *text-indent: -9999px;
+}
+
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 150%;
+}
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* ==========================================================================
+   Print styles
+   ========================================================================== */
+
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    @page {
+        margin: 0.5cm;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+    
+}
+.holiday {
+background-color: #fff
+}
+
+.home
+{
+
+}
+
+.main-container1 {
+    
+    height:350px;
+width:95%;
+    padding:2.5%;
+    
+}
+
+.main wrapper clearfix
+{ 
+  font-family: sans-serif;
+ 
+ 
+  
+}
+.main-container2 {
+    height:700px;
+
+}
+.headmenu li {
+        float:right;
+	background-color: rgb(92, 96, 157);
+	width:100px;
+	height:30px;
+	 padding: 10px 5px;
+	border-radius: 20px 20px; 
+	cursor: pointer;
+	color: white;
+	margin-top: -12px;
+        /* margin-bottom: 0px; */
+	display: table-cell;
+	font-family:verdana;
+}
+.menu li{
+
+	background-color: rgba(0,0,0,0.8);
+	width:100px;
+	height:10px;
+	padding: 10px 5px;
+	border-radius: 20px 20px 0px 0px; 
+	cursor: pointer;
+	color: white;
+	margin: -3px;
+	display: table-cell;
+	font-family:verdana;
+}
+
+.headmenu,.menu li:hover{
+	background-color: rgb(54, 53, 53);;
+}
+
+
+.headmenu,.menu .item1:hover{
+	display: block;
+}
+
+#Hotels
+{
+	display: none;
+}
+#Cars
+{
+	display: none;
+}
+
+.menu{
+	position: absolute;
+	padding-left: 50px;
+	margin-top: -10px;
+	margin-left: 0px;
+}
+
+.footer-ul li{
+    display: table-cell;
+    padding: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

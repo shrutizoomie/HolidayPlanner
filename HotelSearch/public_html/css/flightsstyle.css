@@ -1,0 +1,238 @@
+@charset "UTF-8";
+/* CSS Document */
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+.flight {
+width: 65%;
+height: 120px;
+padding: 3%;
+         box-shadow: 5px 5px 5px #888888;
+}
+.location {
+border: 1px transparent green;
+width: 25%;
+height:100%;
+display: table-cell;
+padding: 0.1%;
+         vertical-align: top;
+}
+.place {
+    vertical-align: top;
+border: 1px transparent blue;
+}
+.date {
+    vertical-align: bottom;
+border: 1px transparent violet; 
+}
+.time {
+    vertical-align: bottom;
+border: 1px transparent orange; 
+}
+.image {
+border: 0px transparent black; 
+width: 15%;
+height: 100%;
+display: table-cell;
+         vertical-align: top;
+}
+.price_button {
+border: 1px transparent red; 
+height: 100%;
+padding: 1%;
+display: table-cell;
+         //position:absolute;
+right:10px;
+width:60px;
+
+}
+.button {
+display: table-cell;
+width: 100%;
+border: 0px transparent black; 
+height: 40%;
+float: right;
+}
+.price {
+width: 100%;
+       font-weight: bold;
+align: right;
+border: 0px transparent black;
+}
+
+
+/*
+   Page level comments
+ */
+html,body {
+height: 100%;
+        margin-top: 0px;
+        margin-right: 0px;
+        margin-bottom: 0px;
+padding: 5 px;
+         margin-left: 0px;
+}
+
+#container {
+    max-width: 1000px;
+    min-width: 768px;
+margin: 0 auto;
+
+position: relative;
+height: 100%;
+}
+#header {
+background: grey;
+            font-weight: bold;
+            text-align: center;
+padding: 10px;
+width: 0%;
+height: 20%;
+}
+
+#main {
+overflow: hidden;
+position: relative;
+}
+#sidebar {
+display: table-cell;
+         background-color: rgba(230,238,200,1.00);
+width: 100%;
+float: left;
+height: 100%;
+        text-align: left;
+}
+#primary {
+
+
+}
+#footer {
+background: green;
+color: white;
+padding: 10px;
+}
+
+
+.car {
+width: 80%;
+height: 75px;
+padding: 3%;
+         box-shadow: 5px 5px 5px #888888;
+
+}
+
+.hotel {
+width: 65%;
+height: 120px;
+padding: 3%;
+         box-shadow: 5px 5px 5px #888888;
+flex:1;
+}
+#hotelcontainer {
+height:1000px;
+width:700px;
+
+margin:0px auto;
+display: flex;
+flex:1;
+     flex-direction: row;
+border: 0px transparent green;
+padding:1%;
+
+}
+.div3 {
+    // height: 100%;
+flex: 1;
+margin:0px auto;
+border: 0px transparent #aaaaaa;
+        flex-direction: column;
+}
+
+.div2 {
+width: 100%;
+margin:0px auto;
+border: 1px transparent #aaaaaa;
+flex: 1;
+      flex-direction: row;
+}
+
+.flexrow {
+display: flex;
+height:100%;
+margin:0px auto;
+border: 1px transparent #aaaaaa;
+flex: 1;
+      flex-direction: row;
+      text-align:center;
+      vertical-align:middle;
+}
+.flexcol {
+display: flex;
+width: 100%;
+margin:0px auto;
+border: 1px transparent #aaaaaa;
+        flex-direction: column;
+        text-align:center;
+        vertical-align:middle;
+
+}
+
+
+#hotel {
+height:200px;
+width:700px;
+
+margin:0px auto;
+display: flex;
+flex:1;
+border: 1px transparent green;
+padding:1.5%;
+        vertical-align: middle;
+        box-shadow: 5px 5px 5px #888888;
+
+}
+
+#flight2 {
+height:140px;
+width:700px;
+
+margin:0px auto;
+display: flex;
+flex:1;
+border: 1px transparent green;
+padding:1.5%;
+        vertical-align: middle;
+        box-shadow: 5px 5px 5px #888888;
+
+}
+
+#car{
+height:140px;
+width:700px;
+
+margin:0px auto;
+display: flex;
+flex:1;
+border: 1px transparent green;
+padding:1.5%;
+        vertical-align: middle;
+                box-shadow: 5px 5px 5px #888888;
+
+}
+                
+#hotel {
+height:200px;
+width:700px;
+
+margin:0px auto;
+display: flex;
+flex:1;
+border: 1px transparent green;
+padding:1.5%;
+        vertical-align: middle;
+        box-shadow: 5px 5px 5px #888888;
+
+}
+
