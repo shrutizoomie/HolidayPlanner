@@ -119,8 +119,10 @@ padding: 10px;
 width: 80%;
 height: 75px;
 padding: 3%;
-         box-shadow: 5px 5px 5px #888888;
-
+outline-color: blue;
+box-shadow: 5px 5px 5px #888888;
+backface-visibility: hidden;
+opacity:1;
 }
 
 .hotel {
@@ -209,7 +211,7 @@ padding:1.5%;
 }
 
 #car{
-height:140px;
+height: 158px;
 width:700px;
 
 margin:0px auto;
@@ -219,11 +221,12 @@ border: 1px transparent green;
 padding:1.5%;
         vertical-align: middle;
                 box-shadow: 5px 5px 5px #888888;
-
+backface-visibility: hidden;
+opacity:1;
 }
                 
 #hotel {
-height:200px;
+height: 249px;
 width:700px;
 
 margin:0px auto;
