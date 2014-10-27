@@ -81,7 +81,7 @@ input[type="button"]{*padding:7px 15px;}/*IE 7 ONLY*/
 	input[type="reset"]:hover,
 	input[type="button"]:hover{
 	border:1px solid #bbb;
-	background: rgb(252,252,252); /* Old browsers */
+	/* background: rgb(252,252,252); */ /* Old browsers */
 	background: -moz-linear-gradient(top, rgba(252,252,252,1) 0%, rgba(237,237,237,1) 100%); /* FF3.6+ */
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(252,252,252,1)), color-stop(100%,rgba(237,237,237,1))); /* Chrome,Safari4+ */
 	background: -webkit-linear-gradient(top, rgba(252,252,252,1) 0%,rgba(237,237,237,1) 100%); /* Chrome10+,Safari5.1+ */

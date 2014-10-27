@@ -6,46 +6,72 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>MyPlanner</title>
+        <title >< Travel Boulevard : Vacations, Cheap Flights, Airline Tickets &amp; Airfares</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-		<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+        <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
  
         <link rel="stylesheet" href="css/normalize.min.css">
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/kickstart-buttons.css" type="text/css"/>
 
-
+        
         <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
 		
     <script>
+        function validateEmail() {
+    var x = document.forms["EmailForm"]["email"].value;
+    var atpos = x.indexOf("@");
+    var dotpos = x.lastIndexOf(".");
+    if (atpos<1 || dotpos<atpos+2 || dotpos+2>=x.length) {
+        alert("Not a valid e-mail address");
+        return false;
+    }
+}
+    
     function showSearch(item)
     {
 
         if (item === 'item1')
         {
             document.getElementById('flight').style.display = "block";
-            document.getElementById('Cars').style.display = "none";
+            document.getElementById('holidaydeal').style.display = "none";
             document.getElementById('Hotels').style.display = "none";
+             document.getElementById('cars').style.display = "none";
         }
         else if(item === 'item2')
         {
             document.getElementById('flight').style.display = "none";
             document.getElementById('Hotels').style.display = "block";
-            document.getElementById('Cars').style.display = "none";
+            document.getElementById('holidaydeal').style.display = "none";
+             document.getElementById('cars').style.display = "none";
         } 
         else if(item === 'item3')
         {
             document.getElementById('flight').style.display = "none";
             document.getElementById('Hotels').style.display = "none";
-            document.getElementById('Cars').style.display = "block";
+            document.getElementById('holidaydeal').style.display = "block";
+             document.getElementById('cars').style.display = "none";
+        }
+        if (item === 'item4')
+        {
+            document.getElementById('flight').style.display = "none";
+            document.getElementById('holidaydeal').style.display = "none";
+            document.getElementById('Hotels').style.display = "none";
+            document.getElementById('cars').style.display = "block";
+            
         }
 
+    }
+    function plan()
+    {
+        window.open("myplan.html");
     }
     function changeLocation()
     {
 //        alert(window.location);
-//        window.location.assign('/HotelSearch/findhotel.html');
+//        window.location.as
+//        sign('/HotelSearch/findhotel.html');
         window.location.replace('http://www.w3schools.com/');
 //        window.location.href = 'http://www.w3schools.com';
 //        window.location.assign("I:\\SJSUSem2\\CS235\\Assign#3\\HotelSearch\\public_html\\findhotel.html");
@@ -54,7 +80,7 @@
     		
     </head>
 	
-   <body class="holiday">
+   <body class="holiday" >
        
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
@@ -63,67 +89,78 @@
 <div class="header-container">
 
     <header class="wrapper clearfix" >
-        <img src="img/logo_1.jpg" style="height:60px;width:180px;float:left;"/> 
-          
-        <ul class='headmenu'>
-            
-               <li id='headitem1'> Contact Us</li>
-           <li id='headitem2' >My Task</li>
-           <li id='headitem3' >Live Chat</li>
-           </ul>
-
-
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <img src="img/logomain.png" style="height:60px;width:266px;float:left;"/> 
+        
+     <!--   <input type=label name='My plan' value='My Plan' style="float:right;background:linear-gradient(white,brown,brown);color:brown;width:100px;height:40px;">
+        -->
+        <select name="Country"   style="width:100px;height:38px;float:right;placeholder:Select Country;border-radius: 5PX">
+                    <option value="5000$-8000$">USA</option>
+                    <option value="Select Different Country">USA</option>
+                    <option value="1000$-3000$">India</option>
+                    <option value="3000$-5000$">London</option>
+                    <option value="5000$-8000$">Paris</option>
+        </select>
+     
+        <a href="myplan.html"></a>
+        <input type="submit" value="My Plan" onclick="plan()"  style="background:transparent;font-size: medium;color: brown;float:right; ">
+        <img src="img/chat.PNG" style="float:right;padding-right: 10px"/>
+        <img src="img/contact.png" alt="" style="float:right"/>
+        
     </header>
+   
 </div> <!--  header-container -->
 
-<div class="main-container1" style="background-image:url(img/back_1.jpg);">
+<div class="main-container1" style="background-image:url(img/back_2.jpg);width:2600px;background-repeat:no-repeat ;box-shadow:10px 10px 5px #888888;">
 <ul class='menu'>
-        <li id='item1' onclick='showSearch("item1")'>Flights</li>
-        <li id='item2' onclick='showSearch("item2")'>Hotels</li>
-        <li id='item3' onclick='showSearch("item3")'>Holidays</li>
-</ul>
+    
+        <li id='item1' onclick='showSearch("item1")'><img src="img/f_1.gif" style="width:20px;height:20px" /> &nbspFlights</li>
+        <li id='item2' onclick='showSearch("item2")'><img src="img/h.gif"  style="width:20px;height:20px" />&nbspHotels</li>
+        <li id='item3' onclick='showSearch("item3")'><img src="img/Ho_1.gif"  style="width:20px;height:20px" />Attractions</li>
+        <li id='item4' onclick='showSearch("item4")'><img src="img/c_1.gif"  style="width:20px;height:20px" />&nbspCars</li>
+         </ul>
 <div class="searchbox" >  
 
 <div id="flight" class="searchboxform" >    
     <br>
-    <h2> Book Cheap Flights </h2> 
+    <h2> <img src="img/f_1.gif" style="width:40px;height:40px" /> &nbsp Book Cheap Flights </h2> 
     <hr>
-       <form action="findflight.html" method="get" style="font-family:sans-serif;float:left;color: white;">
+       <form name="FlightsSearch" action="findflight.html"  method=get style="font-family:sans-serif;float:left;color: white;">
             <b>
-                <input type="radio" name="trip" value="One-way" checked>One-way
+                <input type="radio" name="trip" value="One-way" >One-way
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <input type="radio" name="trip" value="Round Trip"> Round Trip
+                <input type="radio" name="trip" value="Round Trip" checked> Round Trip
                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <input type="radio" name="trip" value="Multi City">Multi City
+                <input type="radio" name="trip" value="Multi-City">Multi City
                 <br>
                 <br>
                 
-        From: <input list="Departurecity" name="Departurecity" style="width:180px;height:25px;" placeholder=" Type Departure city " >
+        From: <input list="Departurecity" required value="" name="Departurecity" style="width:180px;height:25px;" placeholder=" Type Departure City " >
             <datalist id="Departurecity" >
-                      <option value="San jose" >
-                      <option value="LA">
+                      <option value="San Jose" >
+                      <option value="Los Angeles">
                       <option value="Chicago">
                       <option value="Denver">
-                      <option value="San fransisco">
+                      <option value="San Fransisco">
             </datalist>
-        To: <input list="Destinationcity" name="Destinationcity" style="width:180px;height:25px;" placeholder=" Type Destination city ">
+        To: <input list="Destinationcity" required value="" name="Destinationcity" style="width:180px;height:25px;" placeholder=" Type Destination City ">
             <datalist id="Destinationcity">
-                     <option value="San jose">
-                     <option value="LA">
+                     <option value="San Jose">
+                     <option value="Los Angeles">
                      <option value="Chicago">
                      <option value="Denver">
-                     <option value="San fransisco">
+                     <option value="San Fransisco">
             </datalist>
-            Budget: <select name="budget" style="width:150px;height:25px;">
-                    <option value="1000$-3000$">0$</option>
+            Budget: <select name="budget"   style="width:150px;height:25px;">
+                   
                     <option value="1000$-3000$">100$-300$</option>
                     <option value="3000$-5000$">300$-500$</option>
                     <option value="5000$-8000$">500$-800$</option>
             </select>
             <br>
             <br>
-            Departure: <input type="date" name="bday" min="2014-10-05" style="width:150px;height:25px;">
-            Return: <input type="date" name="bday" min="2014-10-05" style="width:150px;height:25px;">
+            Departure: <input type="date" value="2014-10-22" name="Ddate" min="2014-10-22" style="width:150px;height:25px;">
+            Return: <input type="date" value="2014-10-22" name="Rdate" min="2014-10-22" style="width:150px;height:25px;">
             Adults: <select name="adults" style="width:50px;height:25px;">
                     <option value="1">1</option>
                     <option value="2">2</option>
@@ -147,7 +184,12 @@
                     <option value="9">9</option>
             </select> 
             <br> <br>
-            <input type="submit" onclick = "changeLocation()" value="Search Flights" style="background-color:orange ;width:150px;height:40px; float:right ;" > 
+            
+            <input type="submit" onclick = "showFlight"  value="Search Flights" style="float:right;  background: linear-gradient(white,orange,orange,orange,orange,orange,orange);
+width:150px;
+height:40px;
+float:right;
+color:white;"  /> 
 
             </form>
     </div><!--flight searchboxform -->
@@ -155,21 +197,22 @@
      <div id='Hotels' class="searchboxform"  >
          <br>
 
-        <h2> Make Hotel Reservations  </h2> 
+        <h2> <img src="img/h.gif" style="width:40px;height:40px" /> &nbsp Make Hotel Reservations  </h2> 
         <hr>
-        <h4> I want to go to.... </h4>
+        <h3>Find me a hotel in.. </h3>
 
         <form action="findhotel.html" method="get" style="font-family:sans-serif;float:left;color: white;">
 
-             <input list="Destination" name="Destination" style="width:250px;height:25px;" placeholder="City or Hotel Name" >
-            <datalist id="Destination">
-                      <option value="San jose" >
-                       <option value="LA">
+             <input list="Destination" required value="" name="Destination" style="width:250px;height:25px;" placeholder="City" >
+            
+             <datalist id="Destination">
+                      <option value="San Jose" >
+                       <option value="Los Angeles">
                       <option value="Chicago">
                       <option value="Denver">
-                      <option value="San fransisco">
+                      <option value="San Fransisco">
             </datalist>
-
+            &nbsp;&nbsp;&nbsp;
             Budget: <select name="budget" style="width:150px;height:25px;">
                     <option value="0">0$</option>
                     <option value="100$-300$">100$-300$</option>
@@ -179,10 +222,12 @@
             <br>
             <br>
             Check In:
-                    <input type="date" name="bday" min="2014-10-05" style="width:150px;height:25px;">
-            Check Out:
-                    <input type="date" name="bday" min="2014-10-05" style="width:150px;height:25px;">
-            Room(s):<select name="Children" style="width:50px;height:25px;">
+                    <input type="date" name="bday" value="2014-10-22" min="2014-10-22" style="width:150px;height:25px;">
+                    &nbsp;&nbsp;&nbsp;
+            Check Out: 
+                    <input type="date" name="bday" value="2014-10-22" min="2014-10-22" style="width:150px;height:25px;">
+                     &nbsp;&nbsp;&nbsp;
+            Room(s): <select name="Children" style="width:50px;height:25px;">
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -193,8 +238,119 @@
                     <option value="8">8</option>
                     <option value="9">9</option>
             </select> 
-                    <br> <br>
-            <input type="submit" value="Find my hotel!" style="background-color:orange ;width:150px;height:40px; float:right ;" > 
+                    <br> <br>     
+            <input type="submit" value="Search Hotels" style="color:white ;width:150px;height:40px; float:right;background: linear-gradient(white,orange,orange,orange,orange,orange,orange)" > 
+            </form>
+
+
+
+
+    </div> <!-- #Hotels --> 
+ <div id='cars' class="searchboxform"  >
+         <br>
+
+        <h2><img src="img/c_1.gif" style="width:40px;height:40px" /> &nbsp Car Reservations  </h2> 
+        <hr>
+        <form action="findcar.html" method="get" style="font-family:sans-serif;float:left;color: white;">
+            Type your Location: 
+            &nbsp;&nbsp;&nbsp;&nbsp;<input list="location" required value="" name="location" style="width:250px;height:25px;" placeholder="City" >
+            
+          
+             <datalist id="location">
+                      <option value="San Jose" >
+                       <option value="Los Angeles">
+                      <option value="Chicago">
+                      <option value="Denver">
+                      <option value="San Fransisco">
+             </datalist> <br>
+             <br>
+            
+             
+             Picking up: <input list="carPickUp" required value="" name="carPickUp" style="width:200px;height:25px;" placeholder="Type Location" >
+            
+             <datalist id="carPickUp">
+                      <option value="Laurel Street(San Francisco)" >
+                       <option value="Parkmoor Ave(San Francisco)">
+                      <option value="Race Street(San Francisco)">
+                      <option value="Lawrence Road(San Francisco)">
+                      <option value="Santana Row(San Francisco)">
+            </datalist>
+            Dropping off: <input list="carDropOff" required value="" name="carDropOff" style="width:200px;height:25px;" placeholder="Type Location" >
+            
+             <datalist id="carDropOff">
+                      <option value="De Anza(San Francisco)">
+                       <option value="El Camino(San Francisco)">
+                      <option value="Lincoln(San Francisco)">
+                      <option value="Willow Glen(San Francisco)">
+                      <option value="Sinclair Street(San Francisco)">
+            </datalist>
+            
+            <br>
+            <br>
+            Pick up date:
+                    <input type="date" name="bday" value="2014-10-22" min="2014-10-22" style="width:130px;height:25px;">
+                    &nbsp;
+                     <select  style="width:75px;height:25px">
+             <option value="10">1 a.m</option>
+              <option value="10">2a.m</option>
+               <option value="10">3a.m</option>
+                <option value="10">4a.m</option>
+                 <option value="10">5a.m</option>
+                  <option value="10">6a.m</option>
+                   <option value="10">7a.m</option>
+                    <option value="10">8a.m</option>
+                     <option value="10">9a.m</option>
+                      <option value="10">10a.m</option>
+                    <option value="11">11a.m</option>
+                    <option value="12">12a.m</option
+                    <option value="10">1 p.m</option>
+              <option value="10">2p.m</option>
+               <option value="10">3p.m</option>
+                <option value="10">4p.m</option>
+                 <option value="10">5p.m</option>
+                  <option value="10">6p.m</option>
+                   <option value="10">7p.m</option>
+                    <option value="10">8p.m</option>
+                     <option value="10">9p.m</option>
+                      <option value="10">10p.m</option>
+                    <option value="11">11p.m</option>
+                    <option value="12">12p.m</option>
+                   
+            </select>
+                     &nbsp;&nbsp;&nbsp;
+            Drop off date: 
+                    <input type="date" name="bday" min="2014-10-22" value="2014-10-22" style="width:130px;height:25px;">
+                     &nbsp;
+             <select  style="width:75px;height:25px" >
+             <option value="10">1 a.m</option>
+              <option value="10">2a.m</option>
+               <option value="10">3a.m</option>
+                <option value="10">4a.m</option>
+                 <option value="10">5a.m</option>
+                  <option value="10">6a.m</option>
+                   <option value="10">7a.m</option>
+                    <option value="10">8a.m</option>
+                     <option value="10">9a.m</option>
+                      <option value="10">10a.m</option>
+                    <option value="11">11a.m</option>
+                    <option value="12">12a.m</option
+                    <option value="10">1 p.m</option>
+              <option value="10">2p.m</option>
+               <option value="10">3p.m</option>
+                <option value="10">4p.m</option>
+                 <option value="10">5p.m</option>
+                  <option value="10">6p.m</option>
+                   <option value="10">7p.m</option>
+                    <option value="10">8p.m</option>
+                     <option value="10">9p.m</option>
+                      <option value="10">10p.m</option>
+                    <option value="11">11p.m</option>
+                    <option value="12">12p.m</option>
+                   
+            </select> 
+                     <br> <br>
+                    
+            <input type="submit" value="Search Cars" style="color:white ;width:150px;height:40px; float:right;background: linear-gradient(white,orange,orange,orange,orange,orange,orange)" > 
             </form>
 
 
@@ -202,33 +358,34 @@
 
     </div> <!-- #Hotels --> 
 
-    <div id='Cars' class="searchboxform" >
+    <div id='holidaydeal' class="searchboxform" >
 
         <br>
-        <h2> Books Holiday Packages  </h2>
+        <h2><img src="img/Ho_1.gif" style="width:40px;height:40px" /> &nbsp Top Attractions  </h2>
         <hr>
        
-
-       <form action="demo_form.asp" method="get" style="font-family:sans-serif;float:left;color: white;">
+       
+       <form action="findsightseeing.html" method="get" style="font-family:sans-serif;float:left;color: white;">
           <h4> I want to go to.... </h4>
-         <input list="Destination" name="Destination" style="width:300px;height:25px;" pLaceholder="Type Destinaation City" >
-           <datalist id="Destination">
-                     <option value="San jose" >
-                      <option value="LA">
+         <input list="attractionDestination" required value="" name="attractionDestination" style="width:300px;height:25px;" pLaceholder="Type Destination City" >
+           <datalist id="attractionDestination">
+                     <option value="San Jose" >
+                      <option value="Los Angeles">
                      <option value="Chicago">
                      <option value="Denver">
-                     <option value="San fransisco">
+                     <option value="San Fransisco">
            </datalist>
          <span>
-           Budget:<select name="budget" style="width:150px;height:30px;">
-                   <option value="0">0$</option>
+           &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+           Budget: <select name="budget" style="width:150px;height:30px;">
+                   
                    <option value="100$-300$">100$-300$</option>
                    <option value="300$-500$">300$-500$</option>
                    <option value="500$-800$">500$-800$</option>
            </select>
          </span>
              <br> <br>
-            <input type="submit" value="Search Hotels" style="background-color:orange ;width:150px;height:40px; float:right ;" > 
+            <input type="submit" value="Search Attractions" style="background-color:orange ;width:150px;height:40px; float:right ;background: linear-gradient(white,orange,orange,orange,orange,orange,orange);color:white" > 
 
             </form>
 
@@ -240,12 +397,12 @@
 
 <div class="main-container2" >
 <div class="main wrapper clearfix" >       
-<table>
+<table style="margin-left: 100px">
     <tr>
         <td>
             <h2> Holiday Offers </h2> 
         
-<div class="Holidayoffer">
+<div class="subdiv">
 <table style="width:100%">
 <tr>
 <th align="left">
@@ -254,18 +411,18 @@
 </tr>
 <tr>
    <td colspan="3" align:center >
-                <img src="img/hollywood-sign.jpg" alt="" style="height:200px;width:400px; " />
+                <img src="img/hollywood.jpg" alt="" style="height:50px;width:322px" />
    </td>
 </tr>
 <b>
 
 <tr>
         <td>East State Holiday</td>		
-        <td style="color:red;"> $115 </td>
+        <td style="color:red;"> $215 </td>
 </tr>
 <tr>
         <td>Luxury Holiday</td>		
-        <td style="color:red;"> $115 </td>
+        <td style="color:red;"> $105 </td>
 </tr >
 <tr>
         <td>Beach Holiday Holiday</td>		
@@ -273,7 +430,7 @@
 </tr>
 
 </table> <!--table Holiday Offers -->
-<a href=" www.google.com " style="float:right;" >  >> more </a>    
+<a href="findsightseeing.html" style="float:right;color:blue" >  >> more </a>    
 
         </div><!--Holiday Offers -->
 </td>
@@ -284,6 +441,7 @@
                 <div class="subdiv">
                         <table style="width:100%">
                                 <tr> 
+                                    <th></th>
                                         <th align="left"> Route </th>
                                         <th align="left"> One way fares </th>
 
@@ -296,13 +454,13 @@
                                 </tr>
                                 <tr>
                                         <td><img src="img/flight.jpg" alt="" style="height:25px;width:25px;"/></td>
-                                        <td> Chicago to Newyork </td>		
+                                        <td> Chicago to New York </td>		
                                         <td style="color:red;"> $380 </td>
                                 </tr>
 
                                 <tr>
                                          <td><img src="img/flight.jpg" alt="" style="height:25px;width:25px;"/></td>
-                                        <td> San Fransisco to Los angles</td>		
+                                        <td> San Francisco to Los Angeles</td>		
                                         <td style="color:red;"> $115 </td>
                                 </tr>
                                 <tr>
@@ -312,13 +470,13 @@
                                 </tr >
                                 <tr>
                                         <td><img src="img/flight.jpg" alt="" style="height:25px;width:25px;"/></td>
-                                        <td>Los angles to San Jose</td>		
+                                        <td>Los Angeles to San Jose</td>		
                                         <td style="color:red;"> $105 </td>
                                 </tr>
 
 
                         </table><!--table flight -->
-                        <a href=" www.google.com " style="float:right;" > >>more </a>    
+                        <!-- a href= "findflight.html" style="float:right;color:blue" > >>more </a-->    
 
                         </div> <!--flight subdiv -->
 
@@ -326,40 +484,164 @@
 </td>
 <td valign="top">
 <div>
-<h3>Subscribe for Deals</h3>
+  &nbsp; &nbsp;
+<h2 style='margin-Top: -6PX'>Subscribe for Deals</h2>
 <div class="subscribe">
-          
-<form>
-<input type="email" name="email" style="height:25px;width:150px;padding-right:5px;placeholder:Enter Email;">
-<input type="submit" value="Submit" style="background-color:orange;height:30px;width:80px ">
+   
+<form name="EmailForm" action="demo_form.asp" onsubmit="return validateEmail();" method="post">
+Get best travel deals in your Mailbox
+<input type="email" name="email" style="height:32px;width:250px;padding-left:5px;placeholder:Enter Email;" placeholder="Ux-plorers@gmail.com">
+<input type="submit" value="Submit" style="background:linear-gradient(white,orange,orange,orange,orange,orange,orange);color:white; height:30px;width:80px ">
+ 
 </form>
 </div> <!--subscribe -->
 </div><!--subscribe -->
 </td>
-    </tr></table>
+    </tr>
+
+<tr>
+    
+<td>
+<div>                           
+                <h2 > Hotels <h2>
+
+                <div class="subdiv">
+                        <table style="width:100%">
+                                <tr> 
+                                        <th align="left"> Hotels </th>
+										<th align="left"> Location </th>
+                                        <th align="left"> Cost per night</th>
+
+                                </tr>
+
+                                <tr>
+                                        <td><img src="img/hicon.png" style="height:25px;width:25px;"/></td>
+                                        <td> Marriot </td>
+										<td> San Jose </td>
+										
+                                        <td style="color:red;"> $180 </td>
+                                </tr>
+                                <tr>
+                                        <td><img src="img/hotelicon.png" style="height:25px;width:25px;"/></td>
+                                        <td> QualityInn </td>
+										<td> Chicago </td>
+										
+                                        <td style="color:red;"> $280 </td>
+                                </tr>
+								<tr>
+                                        <td><img src="img/hotelicon.png" style="height:25px;width:25px;"/></td>
+                                        <td> Ramada </td>
+										<td> Maryville </td>
+										
+                                        <td style="color:red;"> $230 </td>
+                                </tr>
+                                <td><img src="img/hicon.png" style="height:25px;width:25px;"/></td>
+                                        <td> Marriot </td>
+										<td> San Jose </td>
+                                                                                
+                                        <td style="color:red;"> $195 </td>
+                                </tr>
+
+                        </table><!--table flight -->
+                        <a href="findhotel.html" style="float:right;color:blue" > >>more </a>    
+                       
+                        </div> <!--flight subdiv -->
+
+                        </div><!--flight -->
+</td>
+<td>
+<div>                           
+                <h2 > Attractions <h2>
+
+                <div class="subdiv">
+                        <table style="width:100%">
+                                <tr> 
+                                        <th align="left"> Attractions </th>
+					<th align="left"> Location </th>
+                                      
+
+                                </tr>
+
+                                <tr>
+                                        
+                                        <td> Skydeck</td>
+					<td> Chicago </td>
+									
+                                </tr>
+                                 <tr>
+                                        
+                                        <td> Golden Gate bridge</td>
+					<td> San Francisco </td>
+									
+                                </tr>
+								 <tr>
+                                        
+                                        <td> Niagara Falls</td>
+					<td> New York </td>
+									
+                                </tr>
+								 <tr>
+                                        
+                                        <td> Grand canyon</td>
+					<td> Arizona </td>
+									
+                                </tr>
+
+                        </table><!--table flight -->
+                        <!--a href=" www.google.com " style="float:right;color:blue" > >>more </a -->    
+
+                        </div> <!--flight subdiv -->
+
+                        </div><!--flight -->
+</td>
+<td valign="top">
+<div>
+      
+    <h2  style='margin-Top: -1PX'>Visa Information</h2>
+<div class="subscribe" style='background-color: white'> 
+     Get more information about visa requirements and apply online for selected destinations.
+     <br>   
+                         <a href="http://www.ustraveldocs.com/in/index.html" style="float:right;color:blue;" > >>more </a>    
+
+</div> <!--subscribe -->
+    <h2>Winter Destinations</h2>
+<div class="subscribe" style='background-color: white'> 
+     If you have the time this Winter, don't forget to visit San Francisco : Awesome weather will enthrall you.
+     <br>   
+                         <a href="http://sfgov.org/" style="float:right;color:blue;" > >>more </a>    
+
+</div> <!--subscribe -->
+
+</div><!--subscribe -->
+</td>
+</tr>
+
+</table>
     
 </div> <!-- main wrapper clearfix -->
 </div> <!-- main container1-->
 
 
-<div class="footer-container" style="background-image:url(img/footer_1.png);">
+<div class="footer-container" style="background-image:url(img/img/footerimage.png);">
                 <footer class="wrapper">
                     
                     <div class="copyright">
                     <table width ='100%' style="margin-top:-10px;font-size: 75%;padding-top:10px;">
                         <tr>
                             <td>
-                                <p>
-                       Copyright Ux-plorer 2014 <br>
-                       * MyPlanner is not a booking agent and does not charge any service fees to users of our site.<br>
-                       </p>
+                                <h3>
+                       
+                                    <center> Travel Boulevard is not a booking agent and does not charge any service fees to users of our site.<br>
+                       <center> &copy Ux-plorer 2014. All rights Reserved. <br>
+                       </h3>
                             </td>
                             <td>
                        <ul class='footer-ul'>
+                          
                       
-                            <li> <a href="www.google.com"  > <img src="img/faceboook.png" style="height:30px;width:30px" /> </a></li>
-                            <li> <a href="www.google.com" > <img src="img/twitter.png" alt="" style="height:30px;width:30px" />  </a></li>
-                            <li> <a href="www.google.com" > <img src="img/youtube.png" alt="" style="height:30px;width:30px" />  </a></li>
+                            <li> <a href=https://www.facebook.com/  > <img src="img/faceboook.png" style="height:30px;width:30px" /> </a></li>
+                            <li> <a href=https://www.google.com/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#q=twitter > <img src="img/twitter.png" alt="" style="height:30px;width:30px" />  </a></li>
+                            <li> <a href=https://www.youtube.com/ > <img src="img/youtube.png" alt="" style="height:30px;width:30px" />  </a></li>
                         </ul>
                     </td>
                         </tr>

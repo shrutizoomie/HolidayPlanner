@@ -21,9 +21,10 @@
 <body>
     <div class="header-container">
     <header class="wrapper clearfix" >
-        <img src="img/logo_1.jpg" style="height:60px;width:180px;float:left;"/> 
+        <img src="img/logomain.png" style="height:60px;width:266px;float:left;">
+       
         <ul class='headmenu'>
-           <li id='headitem4'><a href="findsightseeing.html" style="color:white">MYPLAN</a></li>
+           <li id='headitem4'><a href="myplan.html" style="color:white">MY PLAN</a></li>
            <li id='headitem3'><a href="findsightseeing.html" style="color:white">SEEING</a></li>
            <li id='headitem2'><a href="findcar.html" style="color:white">CAR</a></li>
            <li id='headitem1'><a href="findhotel.html" style="color:white">HOTEL</a></li>
@@ -32,11 +33,58 @@
     </header>
     
     </div> <!--  header-container -->
+    <br>
+    <div align='center' >
+    <h1 style="color:turquoise"> BOOK FLIGHT</h1>    
 
-<div id="flightlist">
+    SORT BY:  <input list="SORTBY" name="SORTBY" style="width:180px;height:25px;" placeholder=" Please select " >
+            <datalist id="SORTBY" >
+                <option value="Price(Low to High)" >
+                      <option value="Price(High to Low)" >
+                      <option value="Stops(0 to 2+)">
+                      <option value="Stops(2+ to 0)">
+                      <option value="Departure (Early to Late)">
+                      <option value="Departure (Late to Early)">
+            </datalist>
+     <input type="submit" value="Sort" style="background:transparent;color:white;font-size: medium; background: linear-gradient(white,orange,orange,orange,orange,orange,orange) ">
+       
+    <hr>
+    </div>
+   
+<div id="flightlist" style="height:800px">
 <script>
 addAllFlights('flightlist');
 </script>
+</div>
+    
+
+<div class="footer-container" style="background-image:url(img/img/footerimage.png);">
+                <footer class="wrapper">
+                    
+                    <div class="copyright">
+                    <table width ='100%' style="margin-top:-10px;font-size: 75%;padding-top:10px;">
+                        <tr>
+                            <td>
+                                <h3>
+                       
+                                    <center> Travel Boulevard is not a booking agent and does not charge any service fees to users of our site.<br>
+                       <center> &copy Ux-plorer 2014. All rights Reserved. <br>
+                       </h3>
+                            </td>
+                            <td>
+                       <ul class='footer-ul'>
+                          
+                      
+                            <li> <a href=https://www.facebook.com/  > <img src="img/faceboook.png" style="height:30px;width:30px" /> </a></li>
+                            <li> <a href=https://www.google.com/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#q=twitter > <img src="img/twitter.png" alt="" style="height:30px;width:30px" />  </a></li>
+                            <li> <a href=https://www.youtube.com/ > <img src="img/youtube.png" alt="" style="height:30px;width:30px" />  </a></li>
+                        </ul>
+                    </td>
+                        </tr>
+                    </table>
+                    </div>
+                    
+        </footer>
 </div>
 
 </body>

@@ -84,7 +84,9 @@ function addButton(text,style) {
     newdiv.setAttribute('class', style);
     var myButton = document.createElement("input");
     myButton.type = "button";
+    //myButton.style.backgroundColor = "green";
     myButton.value = text;
+    myButton.style.backgroundColor="#DD8B00";
     newdiv.appendChild(myButton);
 
     document.body.appendChild(newdiv);
@@ -117,6 +119,9 @@ function addLocationWithTime(loc) {
 function addLogo(imgsrc) {
     var img = new Image();
     img.src = imgsrc;
+    img.onclick = function() {
+        window.location.href = 'http://www.kayak.com';
+    };
     return img;
 }
 
@@ -129,12 +134,17 @@ function addTextLogo(text,image)
     return parent;
 }
 
+function addf()
+{
+        alert("SUCCESS : This hotel has been added to your trip!");
+}
 function addPartnerInfo(partnerinfo) {
     var parent = document.createElement('div');
     parent.innerHTML = ("List of prices in various websites<br><br>\n").bold();
     parent.appendChild(addTextLogo(partnerinfo[0].price,partnerinfo[0].logo ))
         parent.appendChild(addTextLogo(partnerinfo[1].price,partnerinfo[1].logo ))
-        parent.appendChild(addButton('Add hotel','' ))
+        parent.innerHTML += "<input type='button' value='Add Hotel' onclick=addf() style='margin:5px;' />";
+        //parent.appendChild(addButton('Add hotel','' ))
         return parent;
 }
 
@@ -146,7 +156,7 @@ function addHotelFromJson(parent_name, hotel_json) {
     var c = addCols(parent, ['', '', '']);
     c[0].appendChild(addTextLogo(hotel_json.name, hotel_json.logo));
 
-    var rs = addRows(c[1],[hotel_json.name.bold(),hotel_json.styledrating,hotel_json.rating.bold(), hotel_json.description.fontsize(2),hotel_json.reviews,hotel_json.view]);
+    var rs = addRows(c[1],[hotel_json.name.bold(),hotel_json.styledrating, hotel_json.description.fontsize(2),hotel_json.reviews,hotel_json.view]);
     c[2].appendChild(addPartnerInfo(hotel_json.partners));
     divparent.appendChild(parent);
     return parent;
@@ -168,15 +178,43 @@ function randint(start, stop) {
 function addSightInfo(partnerinfo) {
     var parent = document.createElement('div');
     parent.innerHTML = ("<br><br>\n").bold();
-    parent.appendChild(addElement(partnerinfo[0].link.fontsize(2),''));
-        parent.appendChild(addElement(partnerinfo[1].link.fontsize(2),''));
+    
+//    var a = document.createElement('a');
+//    var text = partnerinfo[0].link;
+//    var linkText = document.createTextNode(partnerinfo[0].link);
+//    linkText.fontSize = 2;
+//    a.appendChild(linkText);
+//    a.title = partnerinfo[0].link;
+//    a.fontSize = 2;
+//    a.href = 'http://' + text.substring(8,text.length);
+//    
+//    
+//    parent.appendChild(a);
+//    
+    parent.appendChild(addLinkedElements(partnerinfo[0].link));
+    parent.appendChild(addLinkedElements(partnerinfo[1].link));
     var str="From";
     parent.appendChild(addElement(str.fontsize(2),''));
     var price=("$" + randint(50,100)).bold();
     var str1= price + " <br> per person <br>\n  ";
     parent.appendChild(addElement(str1.fontsize(2),''));
-        parent.appendChild(addButton('Add Trip','' ));
+        parent.appendChild(addButton('Add To Trip','' )).onclick = function() {
+        alert("SUCCESS : This attraction has been added to your trip!");
+    };
         return parent;
+}
+
+function addLinkedElements(text) {
+    var div = document.createElement('div');
+    var a = document.createElement('a');
+    var linkText = document.createTextNode(text);
+    linkText.fontSize = 2;
+    a.appendChild(linkText);
+    a.title = text;
+    a.fontSize = 2;
+    a.href = 'http://' + text.substring(8,text.length);
+    div.appendChild(a);
+    return div;
 }
 
 function addSightFromJson(parent_name,sight_json) {
@@ -186,7 +224,7 @@ function addSightFromJson(parent_name,sight_json) {
     var c = addCols(parent, ['', '', '']);
     c[0].appendChild(addTextLogo(sight_json.name, sight_json.logo));
 
-    var rs = addRows(c[1],[sight_json.name.bold(),sight_json.styledrating, 'Show on map',sight_json.description.fontsize(2),sight_json.Openinghours]);
+    var rs = addRows(c[1],[sight_json.name.bold(),sight_json.styledrating, 'San Francisco',sight_json.description.fontsize(2)]);
     c[2].appendChild(addSightInfo(sight_json.partners));
     divparent.appendChild(parent);
     return parent;
@@ -205,19 +243,32 @@ function addAllSight(divname) {
 //============= HOTELS====================
 
 function randtime() {
-    var d = Math.floor((Math.random() * 100) % 30);
-    var mm = Math.floor((Math.random() * 100) % 12);
-    return d + ":"+ mm + " pm";
+    var d = Math.floor((Math.random() * 100) % 12);
+    var mm = Math.floor((Math.random() * 100) % 60);
+	var str;
+	if(mm<10)
+	str="0"+mm;
+	else
+	str=mm;
+    return d + ":"+ str + " pm";
 }
 
-function addFlightInfo() {
+function addFlightInfo(budget) {
+    var ind = budget.indexOf('0%24-');
+    var min = budget.substring(0, ind);
+    var max = budget.substring(ind + 5).replace('0%24', '');
+ 
 var parent = document.createElement('div');
     parent.innerHTML = ("<br><br>\n");
-    var price=("$" + randint(500,1000)).bold();
+    
+    budget = Math.floor((Math.random() * parseInt(max)) + parseInt(min));
+    var price=("$" + budget).bold();
     var str1= " per person <br>\n  ";
 parent.appendChild(addElement(price,''));
     parent.appendChild(addElement(str1.fontsize(2),''));
-    parent.appendChild(addButton('Add Flight','' ));
+    parent.appendChild(addButton('Add Flight','' )).onclick = function() {
+        alert("SUCCESS : This flight has been added to your trip!");
+    };
     return parent;
 }
 
@@ -240,15 +291,29 @@ function addLocationWithTime(loc) {
 }
 
 function addFlightFromJson(parent_name,flight_json) {
+    
+    var budget; 
+    var sPageURL = window.location.search.substring(1);
+    var sURLVariables = sPageURL.split('&');
+    for (var i = 0; i < sURLVariables.length; i++) 
+    {
+        var sParameterName = sURLVariables[i].split('=');
+        switch(sParameterName[0])
+        {
+            case "Departurecity" : source = sParameterName[1]; break;
+            case "Destinationcity": destination = sParameterName[1]; break;
+            case "budget": budget = sParameterName[1]; break;
+        }
+    }
+    
     var divparent = document.getElementById(parent_name);
     var parent = document.createElement('div');
     parent.setAttribute('id', 'flight2');
     var c = addCols(parent, ['', '','','']);
     c[0].appendChild(addTextLogo('', flight_json.logo));
-   /* var rs = addRows(c[1],[flight_json.name.bold(),flight_json.styledrating, flight_json.        description.fontsize(2),flight_json.Openinghours]);*/
-    addRows(c[1], ['','San Francisco', randtime().bold()]);
-    addRows(c[2], ['','New York', randtime().bold()]);
-     c[3].appendChild(addFlightInfo());
+    addRows(c[1], ['',source.replace('+', " "), randtime().bold()]);
+    addRows(c[2], ['',destination.replace("+", " "), randtime().bold()]);
+    c[3].appendChild(addFlightInfo(budget));
     divparent.appendChild(parent);
 return parent;
 }
@@ -273,7 +338,9 @@ function addCarInfo(partnerinfo) {
     var price=("$" + randint(50,100)).bold();
     var str1= price + " <br> per day <br>\n  ";
     parent.appendChild(addElement(str1.fontsize(2),''));
-        parent.appendChild(addButton('Add Car','' ));
+        parent.appendChild(addButton('Add Car','' )).onclick = function() {
+        alert("SUCCESS : This Car has been added to your trip!");
+    };
         return parent;
 }
 

@@ -9,11 +9,18 @@
 html,
 button,
 input,
-select,
+
 textarea {
     color: #222;
 }
-
+.sort{
+   
+	
+        width:100px;
+	height:30px;
+	cursor: pointer;
+	color: white;
+}
 html {
     font-size: 1em;
     line-height: 1.4;
@@ -24,53 +31,58 @@ a:hover   {color:red; background-color:transparent}
 a:active  {color:#ff0000; background-color:transparent}
 
 .Holidayoffer{
-   border: 1px solid purple;
-    
+    border: 1px solid #91ADDC;
+     font-family:sans-serif;
     outline-color: #5C0A7A;
     outline-width: 5px;
     box-shadow:10px 10px 5px #888888;
     background-color: white;
-    color: black;
+ 
     padding: 3px 3px 0 0;
     text-decoration: none;
     border-radius: 3px 3px 0 0;
     float:left;
-    height:350px;
+    height: 351px;
     width:400px;
     font-weight: normal;
     font-size:13px;
       margin-right: 40px;
       display: inline-block;
-     
+       color:#182954;
 }
 .subscribe
 {
-  border: 1px solid purple;
-  width:250px;
+     font-family:sans-serif;
+  border: 1px solid #91ADDC;
+  width:350px;
   box-shadow:  10px 10px 5px #888888;
   display: inline-block;
   outline-color: #5C0A7A;
   outline-width: 5px;
+  font-size:small ;
+    color:#182954;
+    
 
 }
 .subdiv{
     margin-right: 40px;
-    border: 1px solid purple;
+    border: 1px solid #91ADDC;
     display: inline-block;
     outline-color: #5C0A7A;
     outline-width: 5px;
     box-shadow:  10px 10px 5px #888888;
     background-color: white;
-    color: black;
+    color: #182954;
     padding: 3px 3px;
     text-decoration: none;
     border-radius: 3px 3px 0 0;
     float:left;
+     font-family:sans-serif;
     height:200px;
-    width:310px;
+    width:330px;
     font-weight: normal;
     font-size:13px;
-    
+     
 }
 ::-moz-selection {
     background: #b3d4fc;
@@ -79,7 +91,7 @@ a:active  {color:#ff0000; background-color:transparent}
 
 ::selection {
     background: #b3d4fc;
-    text-shadow: none;
+    text-shadow: antiquewhite;
 }
 
 hr {
@@ -134,6 +146,7 @@ textarea {
    ========================================================================== */
 
 body {
+    margin:0px;
     font: 16px/26px Helvetica, Helvetica Neue, Arial;
     
 }
@@ -168,11 +181,13 @@ body {
     height: 100px;
     font-weight:bold;
     text-align: center;
+    
 }
 
 .footer-container{
-    background-color:rgb(92, 96, 157);
-    height:80px;
+    
+    background-color: #9DA7C7;
+     font-family:sans-serif;
  
 }
 .copyright
@@ -385,7 +400,7 @@ nav a:hover {
 
     .wrapper {
         /* width: 1026px; */ /* 1140px - 10% for margins */
-        /* margin: 0 auto; */
+        margin: 0;
     }
 }
 
@@ -519,8 +534,7 @@ nav a:hover {
     
 }
 .holiday {
-background-color: #fff
-}
+/* background-color: #DCDEDF; */}
 
 .home
 {
@@ -532,6 +546,7 @@ background-color: #fff
     height:350px;
 width:95%;
     padding:2.5%;
+     font-family:sans-serif;
     
 }
 
@@ -543,15 +558,19 @@ width:95%;
   
 }
 .main-container2 {
-    height:700px;
+    height: 650px;
+      color:#182954;
+      background-color: whitesmoke;
+      font-family:sans-serif;
 
 }
 .headmenu li {
         float:right;
-	background-color: rgb(92, 96, 157);
+	
+        background-color: #8CABD9;
 	width:100px;
 	height:30px;
-	 padding: 10px 5px;
+	padding: 10px 5px;
 	border-radius: 20px 20px; 
 	cursor: pointer;
 	color: white;
@@ -563,7 +582,7 @@ width:95%;
 .menu li{
 
 	background-color: rgba(0,0,0,0.8);
-	width:100px;
+	width:110px;
 	height:10px;
 	padding: 10px 5px;
 	border-radius: 20px 20px 0px 0px; 
@@ -574,21 +593,39 @@ width:95%;
 	font-family:verdana;
 }
 
-.headmenu,.menu li:hover{
-	background-color: rgb(54, 53, 53);;
+.headmenu li:hover
+
+
+{
+    background-color: orange;
+    
+}
+.menu li:hover{
+    background-color: orange;
+        color: white;
 }
 
 
 .headmenu,.menu .item1:hover{
-	display: block;
+       color: orange;
+	
 }
 
 #Hotels
 {
 	display: none;
 }
-#Cars
+#holidaydeal
 {
+    display: none;
+}
+.addHotel
+{
+    margin:5px;
+}
+#cars
+{
+    height:160;
 	display: none;
 }
 
