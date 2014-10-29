@@ -55,10 +55,24 @@ function addElement(text, style) {
     return newdiv;
 }
 
-function addRows(div, sizes) {
+function addRows(id,div, sizes) {
     var outputdivs = new Array(sizes.length);
     for (i = 0; i < sizes.length; i++) {
         var newdiv = document.createElement('div');
+        newdiv.id=id+i;
+       // alert(newdiv.id);
+       if(newdiv.id=='hotel1')
+        {
+        newdiv.onclick=function (){
+            window.open('http://www.yelp.com/c/sf/hotels');
+        }
+        }
+        else if (newdiv.id=='car0')
+        {
+        newdiv.onclick=function (){
+         window.open('http://www.yelp.com/c/sf/carrental');
+        }
+        }
         newdiv.setAttribute('class', "flexrow");
         newdiv.innerHTML = sizes[i];
         outputdivs[i] = newdiv;
@@ -156,7 +170,7 @@ function addHotelFromJson(parent_name, hotel_json) {
     var c = addCols(parent, ['', '', '']);
     c[0].appendChild(addTextLogo(hotel_json.name, hotel_json.logo));
 
-    var rs = addRows(c[1],[hotel_json.name.bold(),hotel_json.styledrating, hotel_json.description.fontsize(2),hotel_json.reviews,hotel_json.view]);
+    var rs = addRows('hotel',c[1],[hotel_json.name.bold(),hotel_json.styledrating, hotel_json.description.fontsize(2),hotel_json.reviews,hotel_json.view]);
     c[2].appendChild(addPartnerInfo(hotel_json.partners));
     divparent.appendChild(parent);
     return parent;
@@ -170,6 +184,15 @@ function addAllHotels(divname) {
     }
 }
 
+/*
+function openLink()
+{
+var p= document.getElementById('hotel1');
+        p.onclick=function (){
+            window.open('http://www.yelp.com/c/sf/hotels');
+        }
+        
+}*/
 //=============sightseeing====================
 function randint(start, stop) {
     return Math.floor((Math.random()*1000)%(stop - start)+start);
@@ -224,7 +247,7 @@ function addSightFromJson(parent_name,sight_json) {
     var c = addCols(parent, ['', '', '']);
     c[0].appendChild(addTextLogo(sight_json.name, sight_json.logo));
 
-    var rs = addRows(c[1],[sight_json.name.bold(),sight_json.styledrating, 'San Francisco',sight_json.description.fontsize(2)]);
+    var rs = addRows('',c[1],[sight_json.name.bold(),sight_json.styledrating, 'San Francisco',sight_json.description.fontsize(2)]);
     c[2].appendChild(addSightInfo(sight_json.partners));
     divparent.appendChild(parent);
     return parent;
@@ -311,8 +334,8 @@ function addFlightFromJson(parent_name,flight_json) {
     parent.setAttribute('id', 'flight2');
     var c = addCols(parent, ['', '','','']);
     c[0].appendChild(addTextLogo('', flight_json.logo));
-    addRows(c[1], ['',source.replace('+', " "), randtime().bold()]);
-    addRows(c[2], ['',destination.replace("+", " "), randtime().bold()]);
+    addRows('',c[1], ['',source.replace('+', " "), randtime().bold()]);
+    addRows('',c[2], ['',destination.replace("+", " "), randtime().bold()]);
     c[3].appendChild(addFlightInfo(budget));
     divparent.appendChild(parent);
 return parent;
@@ -350,7 +373,7 @@ function addCarFromJson(parent_name,car_json) {
     parent.setAttribute('id', 'car');
     var c = addCols(parent, ['','','']);
     c[0].appendChild(addTextLogo('',car_json.logo));
-    var rs = addRows(c[1],[car_json.name.bold(),car_json.styledrating, car_json.description.fontsize(2)]);
+    var rs = addRows('car',c[1],[car_json.name.bold(),car_json.styledrating, car_json.description.fontsize(2)]);
     c[2].appendChild(addCarInfo(car_json.partners));
     divparent.appendChild(parent);
     return parent;
