@@ -67,7 +67,7 @@ function addRows(id,div, sizes) {
             window.open('http://www.yelp.com/c/sf/hotels');
         }
         }
-        else if (newdiv.id=='car0')
+        else if (newdiv.id=='car1')
         {
         newdiv.onclick=function (){
          window.open('http://www.yelp.com/c/sf/carrental');
