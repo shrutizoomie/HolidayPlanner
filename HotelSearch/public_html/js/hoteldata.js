@@ -13,7 +13,7 @@ var hoteldata = '[\
 "styledrating":"★★★☆☆ 3.4/5",\
 "rating" : "#46 of 236 Hotels in San Francisco",\
 "description" : " ",\
-"reviews" : "<a href=http://www.tripadvisor.com/Hotel_Review-g45963-d97735-     Reviews-Riviera_Hotel_Casino-Las_Vegas_Nevada.html style=text-decoration:       none >Trip Advisor Reviews : 52</a>",\
+"reviews" : "<a href=http://www.tripadvisor.com/Hotel_Review-g32124-d80932-     Reviews-Hyatt_Regency_San_Francisco_Airport_Burlingame-                         Burlingame_California.html style=text-decoration:none> Trip Advisor             Reviews : 52 </a>" ,\
 "view":"Currently 52 people are viewing this hotel",\
 "logo":"./img/hotel2.jpg",\
 "partners":[{"logo":"./img/Kayaklogo.png","price":"150$"},{"logo":"./img/Triplogo.png", "price":"160$"}]\
